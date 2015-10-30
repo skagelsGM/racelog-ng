@@ -1,0 +1,26 @@
+<div class="raceCarGrid" ng-controller='RaceCarGridController as rcgrid'> 
+  <table id="raceCarGridTable">      
+    <tr>
+      <th>Car #</th>
+      <th>Driver</th>
+      <th>Make</th>
+      <th>Team</th>
+      <th>Sponsor</th>   
+      <th>Status</th>
+      <th>Edit</th>       
+    </tr>
+    <tr ng-repeat="car in rcgrid.cars |orderBy: 'number'" ng-hide="car.driver === 'TEMPLATE'" ng-click="rcgrid.select(car)">
+      <td>{{car.number}}</td>
+      <td>{{car.driver}}</td>
+      <td>
+        <div ng-hide="rcgrid.carMakeImgSrc(car.make) != undefined">{{car.make}}</div> 
+        <img ng-hide="rcgrid.carMakeImgSrc(car.make) === undefined" ng-src="{{rcgrid.carMakeImgSrc(car.make)}}" /> 
+      </td>
+      <td>{{car.raceteam}}</td>
+      <td>{{car.sponsor}}</td>
+      <td>{{car.status}}</td>
+      <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#raceCarModal">Edit</button></td>
+    </tr>
+  </table>     
+</div>
+    

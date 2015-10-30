@@ -1,0 +1,166 @@
+{ 
+  "logName": "Max's Nascar Race Team: Race Cars",
+  "cars": [
+    {
+      "driver":   "TEMPLATE",
+      "number":   "",
+      "raceteam": "",
+      "make":     "",
+      "sponsor":  "",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Austin Dillon",
+      "number":   "3",
+      "raceteam": "Richard Childress Racing",
+      "make":     "Chevrolet",
+      "sponsor":  "Advocare",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Kevin Harvick",
+      "number":   "4",
+      "raceteam": "Steward-Haas Racing",
+      "make":     "Chevrolet",
+      "sponsor":  "Jimmy John's",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Kasey Kahne",
+      "number":   "5",
+      "raceteam": "Hendrick Motorsports",
+      "make":     "Chevrolet",
+      "sponsor":  "Great Clips",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Jeff Gordon",
+      "number":   "24",
+      "raceteam": "Hendrick Motorsports",
+      "make":     "Chevrolet",
+      "sponsor":  "Du Pont",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Jimmy Johnson",
+      "number":   "48",
+      "raceteam": "Hendrick Motorsports",
+      "make":     "Chevrolet",
+      "sponsor":  "Lowe's",
+      "status":   "Active"  
+    },
+    {
+      "driver":   "Jamie McMurray",
+      "number":   "1",
+      "raceteam": "Chip Ganassi Racing",
+      "make":     "Chevrolet",
+      "sponsor":  "McDonald's",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Brian Scott",
+      "number":   "33",
+      "raceteam": "Joe Falk",
+      "make":     "Chevrolet",
+      "sponsor":  "Rheem",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Ricky Stenhouse Jr.",
+      "number":   "17",
+      "raceteam": "Roush Fenway Racing",
+      "make":     "Ford",
+      "sponsor":  "Best Buy",
+      "status":   "Active"    
+    },
+    {
+      "driver":   "Austin Dillon",
+      "number":   "3",
+      "raceteam": "Richard Childress Racing",
+      "make":     "Chevrolet",
+      "sponsor":  "Cheerios",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Joey Logano",
+      "number":   "22",
+      "raceteam": "Team Penske",
+      "make":     "Ford",
+      "sponsor":  "Hertz",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Aric Almirola",
+      "number":   "43",
+      "raceteam": "Richard Petty Motorsports",
+      "make":     "Ford",
+      "sponsor":  "Smithfield",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Kurt Busch",
+      "number":   "41",
+      "raceteam": "Steward-Haas Racing",
+      "make":     "Chevrolet",
+      "sponsor":  "Haas",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Kyle Busch",
+      "number":   "18",
+      "raceteam": "Joe Gibbs Racing",
+      "make":     "Toyota",
+      "sponsor":  "M&Ms",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Matt Kenseth",
+      "number":   "20",
+      "raceteam": "Joe Gibbs Racing",
+      "make":     "Toyota",
+
+      "sponsor":  "The Home Depot",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Tony Stewart",
+      "number":   "14",
+      "raceteam": "Steward-Haas Racing",
+      "make":     "Chevrolet",
+      "sponsor":  "Mobil",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Trevor Bayne",
+      "number":   "21",
+      "raceteam": "Roush Fenway Racing",
+      "make":     "Ford",
+      "sponsor":  "Motorcraft",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Brian Vickers",
+      "number":   "55",
+      "raceteam": "Michael Waltrip Racing",
+      "make":     "Toyota",
+      "sponsor":  "Aaron's",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Danica Patrick",
+      "number":   "10",
+      "raceteam": "Steward-Haas Racing",
+      "make":     "Chevrolet",
+      "sponsor":  "Go Daddy",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Dale Earnhardt Jr.",
+      "number":   "88",
+      "raceteam": "Hendrick Motorsports",
+      "make":     "Chevrolet",
+      "sponsor":  "Diet Moutain Dew",
+      "status":   "Active"
+    }
+  ]
+}

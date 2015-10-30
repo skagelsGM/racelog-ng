@@ -1,0 +1,90 @@
+
+body {
+  background-color: #F8F8F8;
+  font-family:    'Open Sans', sans-serif;
+  font-size:      14px;
+  font-weight:    normal;
+  line-height:    1.2em;
+  margin:         15px;
+}
+
+h1, p {
+  color:          #333;
+}
+
+.raceCarGrid {
+  padding-bottom: 20pt;
+  float:         right;
+  width:          100%; 
+  border-collapse:collapse;
+}
+
+.raceCarGrid td{ 
+  padding:        7px;
+  border:         #4e95f4 1px solid;
+}
+
+.raceCarGrid tr{
+  background:     #b8d1f3;
+}
+
+/*  Define the background color for all the ODD background rows  */
+.raceCarGrid tr:nth-child(odd){ 
+  background:     #b8d1f3;
+}
+
+/*  Define the background color for all the EVEN background rows  */
+.raceCarGrid tr:nth-child(even){
+  background:     #dae5f4;
+}
+
+.badge {
+  border:         2px solid brown;
+  border-radius:  1em;
+  background:     red;
+  font-size:      14pt;
+  width:          14em;
+  height:         7em;
+  text-align:     center;
+  float:          left;
+  margin-left:    20px;
+  white-space:    nowrap;
+  overflow:       hidden;
+}
+
+.raceCarEditor {
+  color:          black;
+  background:     white;
+  font-family:    "Marker Felt", cursive;
+  padding-top:    1.0em;
+  padding-bottom: 0.7em;
+  
+  border:         2px solid brown;
+  border-radius:  1em;
+  font-size:      14pt;
+  width:          14em;
+  height:         20em;
+  text-align:     center;
+  /*float:          left;*/
+  margin-left:    20px;
+  white-space:    nowrap;
+  overflow:       hidden;
+}
+
+#addButton, #updateButton {
+  font-size:      12pt;
+  margin-top:     20px;
+}
+
+input[type="text"] {
+  font-size:      12pt;
+  margin-top:     10pt;
+  margin-bottom:  10pt;
+  width:          12em;
+}
+
+@media all and (max-width: 500px) {
+  .badge {
+    margin-left:  0px;
+  }
+}

@@ -1,0 +1,60 @@
+
+<!-- Modal -->
+  <div class="modal fade" id="raceCarModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Race Car Editor</h4>
+        </div>
+        <div class="modal-body">
+
+
+<div class="raceCarEditor" ng-controller="RaceCarController as raceCarCtrl">
+  <form name="raceCarForm" ng-submit="raceCarCtrl.addCar()">
+  <div>
+    <label>Car #:</label>
+    <input type="text" name="inputNumber" maxlength="15" ng-model="raceCarCtrl.car.number" required>
+  </div>
+  <div>
+    <label>Driver:</label>
+    <input type="text" name="inputDriver" maxlength="50" ng-model="raceCarCtrl.car.driver" required>
+  </div>
+  <div>
+    <label>Team:</label>
+    <input type="text" name="inputRaceTeam" maxlength="15" ng-model="raceCarCtrl.car.raceteam" required>
+  </div>
+  <div>
+    <label>Make:</label>
+    <input type="text" name="inputMake" maxlength="15" ng-model="raceCarCtrl.car.make" required>
+  </div>
+  <div>
+    <label>Sponsor:</label>
+    <input type="text" name="inputSponsor" maxlength="15" ng-model="raceCarCtrl.car.sponsor" required>
+  </div>
+  <div>
+    <label>Status:</label>
+    <input type="text" name="inputStatus" maxlength="15" ng-model="raceCarCtrl.car.status">
+  </div>
+  <div>
+    <button id="update" ng-click="raceCarCtrl.update()" ng-show="raceCarCtrl.show('update')">Update</button>
+  </div>
+  <div>
+    <button id="add" ng-click="raceCarCtrl.add()" ng-show="raceCarCtrl.show('add')">Add</button>
+  </div>
+  <div>
+    <button id="remove" ng-click="raceCarCtrl.remove()" ng-show="raceCarCtrl.show('remove')">Remove</button>
+  </div>
+  </form>
+</div>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
