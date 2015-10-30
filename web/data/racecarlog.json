@@ -151,7 +151,7 @@
       "number":   "10",
       "raceteam": "Steward-Haas Racing",
       "make":     "Chevrolet",
-      "sponsor":  "Go Daddy",
+      "sponsor":  "GoDaddy",
       "status":   "Active"
     },
     {
@@ -159,7 +159,7 @@
       "number":   "88",
       "raceteam": "Hendrick Motorsports",
       "make":     "Chevrolet",
-      "sponsor":  "Diet Moutain Dew",
+      "sponsor":  "Diet Mountain Dew",
       "status":   "Active"
     }
   ]

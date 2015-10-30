@@ -14,14 +14,14 @@
       <td>{{car.number}}</td>
       <td>{{car.driver}}</td>
       <td>
-        <div ng-hide="rcgrid.carMakeImgSrc(car.make) != undefined">{{car.make}}</div> 
-        <img ng-hide="rcgrid.carMakeImgSrc(car.make) === undefined" ng-src="{{rcgrid.carMakeImgSrc(car.make)}}" /> 
+        <div ng-hide="rcgrid.carImgSrc(car.make) != undefined">{{car.make}}</div>
+        <img ng-hide="rcgrid.carImgSrc(car.make) === undefined" ng-src="{{rcgrid.carImgSrc(car.make)}}" />
       </td>
       <td>{{car.raceteam}}</td>
       <td>
-        <div ng-hide="rcgrid.carMakeImgSrc(car.sponsor) != undefined">{{car.sponsor}}</div> 
-        <img class="rcSponsorImg" ng-hide="rcgrid.carMakeImgSrc(car.sponsor) === undefined" ng-src="{{rcgrid.carMakeImgSrc(car.sponsor)}}"
-             width="50" /> 
+        <div ng-hide="rcgrid.carImgSrc(car.sponsor) != undefined">{{car.sponsor}}</div>
+        <img class="rcSponsorImg" ng-hide="rcgrid.carImgSrc(car.sponsor) === undefined" ng-src="{{rcgrid.carImgSrc(car.sponsor)}}"
+             width="50" />
       </td>
       <td>{{car.status}}</td>
       <td>
