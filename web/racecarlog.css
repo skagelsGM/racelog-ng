@@ -1,11 +1,11 @@
 
 body {
   background-color: #F8F8F8;
-  font-family:    'Open Sans', sans-serif;
-  font-size:      14px;
-  font-weight:    normal;
-  line-height:    1.2em;
-  margin:         15px;
+  font-family:      'Open Sans', sans-serif;
+  font-size:        14px;
+  font-weight:      normal;
+  line-height:      1.2em;
+  margin:           15px;
 }
 
 h1, p {
@@ -13,30 +13,38 @@ h1, p {
 }
 
 .raceCarGrid {
-  padding-bottom: 20pt;
-  float:         right;
-  width:          100%; 
-  border-collapse:collapse;
-  margin-left:    20px;
+  padding-bottom:  20pt;
+  float:           center;
+  width:           90%; 
+  border-collapse: collapse;
+  margin-left:     20px;
 }
 
-.raceCarGrid td{ 
+.raceCarGrid td, th { 
   padding:        7px;
   border:         #4e95f4 1px solid;
 }
 
-.raceCarGrid tr{
+.raceCarGrid th {
+  text-align: center;
+}
+
+.raceCarGrid tr {
   background:     #b8d1f3;
 }
 
 /*  Define the background color for all the ODD background rows  */
-.raceCarGrid tr:nth-child(odd){ 
+.raceCarGrid tr:nth-child(odd) { 
   background:     #b8d1f3;
 }
 
 /*  Define the background color for all the EVEN background rows  */
 .raceCarGrid tr:nth-child(even){
   background:     #dae5f4;
+}
+
+.rcSponsorImg img {
+  height: auto;
 }
 
 .badge {
