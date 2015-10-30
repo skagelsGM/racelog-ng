@@ -1,6 +1,13 @@
 
 <!-- Modal -->
-  <div class="modal fade" id="raceCarModal" role="dialog">
+
+
+<div class="raceCarEditor" ng-controller="RaceCarController as raceCarCtrl">
+  <form name="raceCarForm" ng-submit="raceCarCtrl.addCar()">
+
+
+
+<div class="modal fade" id="raceCarModal" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -10,8 +17,6 @@
         <div class="modal-body">
 
 
-<div class="raceCarEditor" ng-controller="RaceCarController as raceCarCtrl">
-  <form name="raceCarForm" ng-submit="raceCarCtrl.addCar()">
   <div>
     <label>Car #:</label>
     <input type="text" name="inputNumber" maxlength="15" ng-model="raceCarCtrl.car.number" required>
@@ -36,25 +41,22 @@
     <label>Status:</label>
     <input type="text" name="inputStatus" maxlength="15" ng-model="raceCarCtrl.car.status">
   </div>
-  <div>
-    <button id="update" ng-click="raceCarCtrl.update()" ng-show="raceCarCtrl.show('update')">Update</button>
-  </div>
-  <div>
-    <button id="add" ng-click="raceCarCtrl.add()" ng-show="raceCarCtrl.show('add')">Add</button>
-  </div>
-  <div>
-    <button id="remove" ng-click="raceCarCtrl.remove()" ng-show="raceCarCtrl.show('remove')">Remove</button>
-  </div>
-  </form>
-</div>
-
 
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="raceCarCtrl.update()" ng-show="raceCarCtrl.show('update')" >Update</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="raceCarCtrl.add()"    ng-show="raceCarCtrl.show('add')"     >Add</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
+
+
+
+  </form>
 </div>

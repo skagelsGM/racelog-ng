@@ -1,12 +1,12 @@
 (function() {
 	var app = angular.module('rclog', []);
 	var gridCtrl = null;
-	var carCtrl = null;
-
-	var carKeys = ['driver','number','raceteam','make','sponsor','status'];
+	var carCtrl  = null;
+	var carKeys  = ['driver','number','raceteam','make','sponsor','status'];
 
 	//
-	// service: imageService
+	// service: 	imageService
+	// description: serves image source urls
 	//
 	app.factory('imageService', function() {
 		var images = {
@@ -26,7 +26,8 @@
 	});
 
 	//
-	// model: carModel
+	// model: 		 carModel
+	// description:  The race car data model
 	//
 	app.service('carModel', function($http) {
 		var service = this;
@@ -43,21 +44,29 @@
 		};
 	});	
 
-	// todo: provice data service
-	// todo: decouple grid controller from race car controller - these should be injected or grabbed from some service, 
-	// or there should be some event listeners put in place
-
 	//
-	// controller: RaceCarGridController
+	// controller: 	RaceCarGridController
+	// description: Controls the data grid for the list of race cars
 	//
-	app.controller( 'RaceCarGridController', ['carModel', '$scope', 'imageService', function(carModel, $scope, imageService) {
+	app.controller( 'RaceCarGridController', ['$scope', '$rootScope', 'carModel', 'imageService', function($scope, $rootScope, carModel, imageService) {
 		gridCtrl = this;
-		this.data = {};
-		$scope.title = 'Waiting for race car log to load...';
-		// $scope.updateSelected = function(car) {
-		// 	gridCtrl.updateSelected(car);
-		// };
 
+		$scope.title = 'Waiting for race car log to load...';
+		$rootScope.isGridCtrlInitialized = true;
+
+		$rootScope.updateSelected = function(car) {
+			gridCtrl.updateSelected(car);
+		};
+
+		$rootScope.removeSelected = function() {
+			gridCtrl.removeSelected(car);
+		};
+
+		$rootScope.add = function(car) {
+			gridCtrl.cars.push(car);
+		}
+
+		this.data = {};
 		this.selected = null;
 
 		this.cars = [ 
@@ -84,12 +93,9 @@
 				}
 		);
 
-		// todo: this shold be event driven; decouple from carCtrl
 		this.select = function(car) {
 			this.selected = car;
-			if (carCtrl != null) {
-				carCtrl.editCar(car);
-			}
+			$rootScope.edit(car);
 		}
 
 		// Find and remove car from the log
@@ -127,24 +133,30 @@
 
 	//
 	// controller: RaceCarController
+	// description: Controls the race car editor/form
 	//
-	app.controller('RaceCarController', function() {
+	app.controller('RaceCarController', ['$scope', '$rootScope', function($scope, $rootScope) {
 		carCtrl = this;
+
+		$rootScope.edit = function(car) {
+			carCtrl.editCar(car);
+		}
+
 		this.car = {};
 		this.carInGrid = null;
 
 		this.mode = function() {
-			if (gridCtrl === null) { return 'init'; }
+			if (!$rootScope.isGridCtrlInitialized) { return 'init'; }
 			return (this.carInGrid === null) ? 'add' : 'update';
 		};
 
 		this.show = function(mode) {
 			var currMode = 'init';
 
-			if (gridCtrl === null) { 
-				currMode = 'init'; 
-			} else {
+			if ($rootScope.isGridCtrlInitialized) {
 				currMode = (this.carInGrid === null) ? 'add' : 'update';
+			} else {
+				currMode = 'init';
 			}
 
 			if (currMode === 'init' || currMode === 'add') {
@@ -166,8 +178,7 @@
 
 		// update car in the grid
 		this.update = function() {
-			//$scope.updateSelected(this.car);
-			gridCtrl.updateSelected(this.car);
+			$rootScope.updateSelected(this.car);
 			// reset form
 			this.carInGrid = null;
 			this.car = {};			
@@ -175,7 +186,7 @@
 
 		// update car in the grid
 		this.remove = function() {
-			gridCtrl.removeSelected(this.car);
+			$rootScope.removeSelected(this.car);
 			// reset form
 			this.carInGrid = null;
 			this.car = {};			
@@ -183,12 +194,11 @@
 
 		// add car to the grid
 		this.add = function() {
-			gridCtrl.cars.push(this.car);
-
+			$rootScope.add(this.car);
 			// reset form
 			this.car = {};	
 		};
-	});
+	}]);
 
 	// directives:
 	// - title

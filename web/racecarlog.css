@@ -17,6 +17,7 @@ h1, p {
   float:         right;
   width:          100%; 
   border-collapse:collapse;
+  margin-left:    20px;
 }
 
 .raceCarGrid td{ 
@@ -65,13 +66,14 @@ h1, p {
   width:          14em;
   height:         20em;
   text-align:     center;
-  /*float:          left;*/
+  float:          left;
   margin-left:    20px;
   white-space:    nowrap;
   overflow:       hidden;
 }
 
-#addButton, #updateButton {
+#addButton, #updateButton, #removeButton {
+  float:          right;
   font-size:      12pt;
   margin-top:     20px;
 }
