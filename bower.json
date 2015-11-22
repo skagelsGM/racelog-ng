@@ -1,0 +1,30 @@
+{
+  "name": "racelog-ng",
+  "authors": [
+    "Scott Kagels <skagels@gmail.com>"
+  ],
+  "description": "Max's racecar log",
+  "main": "web/index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/js/bower",
+    "test",
+    "tests",
+    "web/bower"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-mocks": "~1.4.7"
+  },
+  "keywords": [
+    "angular",
+    "racecar",
+    "log"
+  ]
+}

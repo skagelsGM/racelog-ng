@@ -2,7 +2,7 @@
 <!-- Modal -->
 
 
-<div class="raceCarEditor" ng-controller="RaceCarController as raceCarCtrl">
+<div ng-controller="RaceCarController as raceCarCtrl">
   <form name="raceCarForm" ng-submit="raceCarCtrl.addCar()">
 
 
@@ -41,7 +41,7 @@
     <label>Status:</label>
     <input type="text" name="inputStatus" maxlength="15" ng-model="raceCarCtrl.car.status">
   </div>
-
+  
 
         </div>
         <div class="modal-footer">
