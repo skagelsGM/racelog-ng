@@ -5,20 +5,20 @@
 var RaceCarTitleDirective = function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'race-car-title.html'			
+		templateUrl: 'js/racecarlog/race-car-title.html'			
 	}
 };
 
 var RaceCarGridDirective = function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'race-car-grid.html'			
+		templateUrl: 'js/racecarlog/race-car-grid.html'			
 	}
 };
 
 var RaceCarFormDirective = function() {
 	return {
 		restrict: 'E',
-		templateUrl: 'race-car-form.html'
+		templateUrl: 'js/racecarlog/race-car-form.html'
 	};
 };
