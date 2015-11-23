@@ -2,7 +2,7 @@
 A race car log web app to practice my Angular.JS skills
 
 ## Project Setup
-To setup this project you must first run a few scripts. These directions are for Mac OS X.
+To setup this project you must first run a few commands. These directions are for Mac OS X.
 
 ### Node.js and NPM
 
@@ -25,6 +25,6 @@ To setup this project you must first run a few scripts. These directions are for
     $ npm install karma-jasmine
     $ npm install karma-chrome-launcher 
     $ npm install karma-firefox-launcher
-    $ npm install karma-safaqri-launcher
+    $ npm install karma-safari-launcher
 
 
