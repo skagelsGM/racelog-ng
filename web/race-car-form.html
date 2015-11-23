@@ -2,8 +2,8 @@
 <!-- Modal -->
 
 
-<div ng-controller="RaceCarController as raceCarCtrl">
-  <form name="raceCarForm" ng-submit="raceCarCtrl.addCar()">
+<div ng-controller="RaceCarFormController as rcformCtrl">
+  <form name="raceCarForm" ng-submit="rcformCtrl.addCar()">
 
 
 
@@ -19,34 +19,34 @@
 
   <div>
     <label>Car #:</label>
-    <input type="text" name="inputNumber" maxlength="15" ng-model="raceCarCtrl.car.number" required>
+    <input type="text" name="inputNumber" maxlength="15" ng-model="rcformCtrl.car.number" required>
   </div>
   <div>
     <label>Driver:</label>
-    <input type="text" name="inputDriver" maxlength="50" ng-model="raceCarCtrl.car.driver" required>
+    <input type="text" name="inputDriver" maxlength="50" ng-model="rcformCtrl.car.driver" required>
   </div>
   <div>
     <label>Team:</label>
-    <input type="text" name="inputRaceTeam" maxlength="15" ng-model="raceCarCtrl.car.raceteam" required>
+    <input type="text" name="inputRaceTeam" maxlength="15" ng-model="rcformCtrl.car.raceteam" required>
   </div>
   <div>
     <label>Make:</label>
-    <input type="text" name="inputMake" maxlength="15" ng-model="raceCarCtrl.car.make" required>
+    <input type="text" name="inputMake" maxlength="15" ng-model="rcformCtrl.car.make" required>
   </div>
   <div>
     <label>Sponsor:</label>
-    <input type="text" name="inputSponsor" maxlength="15" ng-model="raceCarCtrl.car.sponsor" required>
+    <input type="text" name="inputSponsor" maxlength="15" ng-model="rcformCtrl.car.sponsor" required>
   </div>
   <div>
     <label>Status:</label>
-    <input type="text" name="inputStatus" maxlength="15" ng-model="raceCarCtrl.car.status">
+    <input type="text" name="inputStatus" maxlength="15" ng-model="rcformCtrl.car.status">
   </div>
   
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="raceCarCtrl.update()" ng-show="raceCarCtrl.show('update')" >Update</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="raceCarCtrl.add()"    ng-show="raceCarCtrl.show('add')"     >Add</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="rcformCtrl.update()" ng-show="rcformCtrl.show('update')" >Update</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="rcformCtrl.add()"    ng-show="rcformCtrl.show('add')"    >Add</button>
           <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
         </div>
       </div>

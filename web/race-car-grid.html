@@ -1,4 +1,4 @@
-<div class="raceCarGrid" ng-controller='RaceCarGridController as rcgrid'> 
+<div class="raceCarGrid" ng-controller='RaceCarGridController as rcgridCtrl'> 
 
   <table id="raceCarGridTable">      
     <tr>
@@ -10,17 +10,17 @@
       <th>Status</th>
       <th>Actions</th>
     </tr>
-    <tr ng-repeat="car in rcgrid.cars |orderBy: 'number'" ng-hide="car.driver === 'TEMPLATE'" ng-click="rcgrid.select(car)">
+    <tr ng-repeat="car in rcgridCtrl.cars |orderBy: 'number'" ng-hide="car.driver === 'TEMPLATE'" ng-click="rcgridCtrl.select(car)">
       <td>{{car.number}}</td>
       <td>{{car.driver}}</td>
       <td>
-        <div ng-hide="rcgrid.carImgSrc(car.make) != undefined">{{car.make}}</div>
-        <img ng-hide="rcgrid.carImgSrc(car.make) === undefined" ng-src="{{rcgrid.carImgSrc(car.make)}}" />
+        <div ng-hide="rcgridCtrl.carImgSrc(car.make) != undefined">{{car.make}}</div>
+        <img ng-hide="rcgridCtrl.carImgSrc(car.make) === undefined" ng-src="{{rcgridCtrl.carImgSrc(car.make)}}" />
       </td>
       <td>{{car.raceteam}}</td>
       <td>
-        <div ng-hide="rcgrid.carImgSrc(car.sponsor) != undefined">{{car.sponsor}}</div>
-        <img class="rcSponsorImg" ng-hide="rcgrid.carImgSrc(car.sponsor) === undefined" ng-src="{{rcgrid.carImgSrc(car.sponsor)}}"
+        <div ng-hide="rcgridCtrl.carImgSrc(car.sponsor) != undefined">{{car.sponsor}}</div>
+        <img class="rcSponsorImg" ng-hide="rcgridCtrl.carImgSrc(car.sponsor) === undefined" ng-src="{{rcgridCtrl.carImgSrc(car.sponsor)}}"
              width="50" />
       </td>
       <td>{{car.status}}</td>
@@ -42,7 +42,7 @@
               Are you sure you want to delete this car?
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="rcgrid.removeSelected()" >Remove</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="rcgridCtrl.removeSelected()" >Remove</button>
             <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
           </div>
         </div>

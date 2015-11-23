@@ -14,6 +14,7 @@ To setup this project you must first run a few scripts. These directions are for
 
 
     $ npm install -g bower
+    $ bower install
     $ bower init
 
 

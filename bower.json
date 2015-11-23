@@ -7,7 +7,7 @@
   "main": "web/index.html",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/skagelsGM/racelog-ng",
   "private": true,
   "ignore": [
     "**/.*",
