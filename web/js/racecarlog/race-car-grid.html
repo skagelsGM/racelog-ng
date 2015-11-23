@@ -2,15 +2,9 @@
 
   <table id="raceCarGridTable">      
     <tr>
-      <th>Car #</th>
-      <th>Driver</th>
-      <th>Make</th>
-      <th>Team</th>
-      <th>Sponsor</th>   
-      <th>Status</th>
-      <th>Actions</th>
+      <th ng-repeat="heading in rcgridCtrl.headings">{{ heading }}</th>
     </tr>
-    <tr ng-repeat="car in rcgridCtrl.cars |orderBy: 'number'" ng-hide="car.driver === 'TEMPLATE'" ng-click="rcgridCtrl.select(car)">
+    <tr ng-repeat="car in rcgridCtrl.cars |orderBy: 'number'" ng-click="rcgridCtrl.select(car)">
       <td>{{car.number}}</td>
       <td>{{car.driver}}</td>
       <td>
@@ -24,9 +18,10 @@
              width="50" />
       </td>
       <td>{{car.status}}</td>
-      <td>
+      <td><div ng-hide="car.number === 'Loading...'">
         <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#raceCarModal"       >Edit</button>
         <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#raceCarRemoveModal" >Remove</button>
+        </div>
       </td>
     </tr>
   </table>  

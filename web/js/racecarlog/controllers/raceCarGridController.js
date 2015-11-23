@@ -2,6 +2,30 @@
 var RaceCarGridController = function($scope, $rootScope, carModel, imageService) {
 	var gridCtrl = this;
 
+	this.headings = [
+    	'Car',
+      	'Driver',
+      	'Make',
+      	'Team',
+      	'Sponsor',
+      	'Status',
+      	'Actions'
+    ];
+
+	this.cars = [ 
+		{
+	      "driver":   "",
+	      "number":   "Loading...",
+	      "raceteam": "",
+	      "make":     "",
+	      "sponsor":  "",
+	      "status":   ""
+	    }
+    ];
+
+   	this.data = {};
+	this.selected = null;
+
 	$scope.title = 'Waiting for race car log to load...';
 	$rootScope.isGridCtrlInitialized = true;
 
@@ -16,29 +40,25 @@ var RaceCarGridController = function($scope, $rootScope, carModel, imageService)
 	$rootScope.add = function(car) {
 		gridCtrl.cars.push(car);
 	}
-
-	this.data = {};
-	this.selected = null;
-
-	this.cars = [ 
-		{
-	      "driver":   "TEMPLATE",
-	      "number":   "",
-	      "raceteam": "",
-	      "make":     "",
-	      "sponsor":  "",
-	      "status":   "Active"
-	    }
-    ];
-
+    
 	// load cars from model
 	carModel.all().then(
-			function(result) {
-				gridCtrl.data = result.data;
-				$scope.title  = result.data.logName;
-				gridCtrl.cars = result.data.cars;
+			function(result) {				
+				// setTimeout( 
+				// function(result, $scope, gridCtrl) {			
+					console.log('loading race car log model...');					
+					$scope.title  = result.data.logName;				
+					gridCtrl.load(result.data);
+				// }
+				// , 2000, result, $scope, gridCtrl);
 			}
+
 	);
+
+	this.load = function(data) {
+		gridCtrl.data = data;
+		gridCtrl.cars = data.cars;
+	};
 
 	// imageService.init();
 

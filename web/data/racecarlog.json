@@ -2,14 +2,6 @@
   "logName": "Max's Nascar Race Team: Race Cars",
   "cars": [
     {
-      "driver":   "TEMPLATE",
-      "number":   "",
-      "raceteam": "",
-      "make":     "",
-      "sponsor":  "",
-      "status":   "Active"
-    },
-    {
       "driver":   "Austin Dillon",
       "number":   "3",
       "raceteam": "Richard Childress Racing",
