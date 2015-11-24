@@ -3,7 +3,7 @@
 
 
 <div ng-controller="RaceCarFormController as rcformCtrl">
-  <form name="raceCarForm" ng-submit="rcformCtrl.addCar()">
+  <form name="raceCarForm">
 
 
 
@@ -16,30 +16,30 @@
         </div>
         <div class="modal-body">
 
-
+  <!-- form fields -->
   <div>
     <label>Car #:</label>
-    <input type="text" name="inputNumber" maxlength="15" ng-model="rcformCtrl.car.number" required>
+    <input type="text" name="inputNumber" maxlength="15" ng-model="car.number" required>
   </div>
   <div>
     <label>Driver:</label>
-    <input type="text" name="inputDriver" maxlength="50" ng-model="rcformCtrl.car.driver" required>
+    <input type="text" name="inputDriver" maxlength="50" ng-model="car.driver" required>
   </div>
   <div>
     <label>Team:</label>
-    <input type="text" name="inputRaceTeam" maxlength="15" ng-model="rcformCtrl.car.raceteam" required>
+    <input type="text" name="inputRaceTeam" maxlength="15" ng-model="car.raceteam" required>
   </div>
   <div>
     <label>Make:</label>
-    <input type="text" name="inputMake" maxlength="15" ng-model="rcformCtrl.car.make" required>
+    <input type="text" name="inputMake" maxlength="15" ng-model="car.make" required>
   </div>
   <div>
     <label>Sponsor:</label>
-    <input type="text" name="inputSponsor" maxlength="15" ng-model="rcformCtrl.car.sponsor" required>
+    <input type="text" name="inputSponsor" maxlength="15" ng-model="car.sponsor" required>
   </div>
   <div>
     <label>Status:</label>
-    <input type="text" name="inputStatus" maxlength="15" ng-model="rcformCtrl.car.status">
+    <input type="text" name="inputStatus" maxlength="15" ng-model="car.status">
   </div>
   
 

@@ -8,7 +8,7 @@ var RaceCarFormController = function($scope, $rootScope) {
 		carCtrl.editCar(car);
 	}
 
-	this.car = {};
+	$scope.car = {};
 	this.carInGrid = null;
 
 	this.mode = function() {
@@ -38,16 +38,16 @@ var RaceCarFormController = function($scope, $rootScope) {
 		this.carInGrid = car;
 		for (var i in carKeys) {
 			var key = carKeys[i];
-			this.car[key] = this.carInGrid[key];	
-		}			
+			$scope.car[key] = this.carInGrid[key];	
+		}		
 	};
 
 	// update car in the grid
 	this.update = function() {
-		$rootScope.updateSelected(this.car);
+		$rootScope.updateSelected($scope.car);
 		// reset form
 		this.carInGrid = null;
-		this.car = {};			
+		$scope.car = {};		
 	};
 
 	// update car in the grid
@@ -55,13 +55,13 @@ var RaceCarFormController = function($scope, $rootScope) {
 		$rootScope.removeSelected(this.car);
 		// reset form
 		this.carInGrid = null;
-		this.car = {};			
+		$scope.car = {};
 	};
 
 	// add car to the grid
 	this.add = function() {
-		$rootScope.add(this.car);
+		$rootScope.add($scope.car);
 		// reset form
-		this.car = {};	
+		$scope.car = {};
 	};
 };
