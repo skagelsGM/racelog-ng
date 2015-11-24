@@ -1,9 +1,14 @@
 // gridController.js
 var RaceCarGridController = function($scope, $rootScope, carModel, imageService) {
 	var gridCtrl = this;
+	var log = {};
 
-	this.headings = [
-    	'Car',
+	//
+    // init $scope
+    //
+	$scope.headings = [
+    	'#',
+    	'Car #',
       	'Driver',
       	'Make',
       	'Team',
@@ -12,7 +17,7 @@ var RaceCarGridController = function($scope, $rootScope, carModel, imageService)
       	'Actions'
     ];
 
-	this.cars = [ 
+	$scope.cars = [ 
 		{
 	      "driver":   "",
 	      "number":   "Loading...",
@@ -22,11 +27,13 @@ var RaceCarGridController = function($scope, $rootScope, carModel, imageService)
 	      "status":   ""
 	    }
     ];
-
-   	this.data = {};
-	this.selected = null;
-
+   	
+	$scope.selected = null;
 	$scope.title = 'Waiting for race car log to load...';
+
+	//
+	// init $rootScope
+	//
 	$rootScope.isGridCtrlInitialized = true;
 
 	$rootScope.updateSelected = function(car) {
@@ -38,68 +45,72 @@ var RaceCarGridController = function($scope, $rootScope, carModel, imageService)
 	};
 
 	$rootScope.add = function(car) {
-		gridCtrl.cars.push(car);
+		$scope.cars.push(car);
 	}
     
-	// load cars from model
-	carModel.all().then(
-			function(result) {				
-				// setTimeout( 
-				// function(result, $scope, gridCtrl) {			
-					console.log('loading race car log model...');					
-					$scope.title  = result.data.logName;				
-					gridCtrl.load(result.data);
-				// }
-				// , 2000, result, $scope, gridCtrl);
-			}
+    //
+	// Controller Functions
+	//
 
+	// load car log from model
+	carModel.all().then(
+		function(result) {				
+			// setTimeout( 
+			// function(result, $scope, gridCtrl) {			
+				console.log('loading race car log model...');					
+				gridCtrl.load(result.data);
+			// }
+			// , 2000, result, $scope, gridCtrl);
+		}
 	);
 
-	this.load = function(data) {
-		gridCtrl.data = data;
-		gridCtrl.cars = data.cars;
+	// load car log into controller
+	this.load = function(log) {
+		gridCtrl.log = log;
+		$scope.title = log.logName;
+		$scope.cars = log.cars;
 	};
-
-	// imageService.init();
-
+	
+	// get car image src url
 	this.carImgSrc = function(make) {
 		return imageService.getImageSource(make);
     }
 
+    // select car in grid
 	this.select = function(car) {
-		this.selected = car;
+		$scope.selected = car;
 		$rootScope.edit(car);
 	}
 
-	// Find and remove car from the log
+	// remove car from the log
 	this.remove = function(car) {			
-		var i = this.cars.indexOf(car);
+		var i = $scope.cars.indexOf(car);
 		if (i != -1) {
-			this.cars.splice(i, 1);
+			$scope.cars.splice(i, 1);
 		}
 	};	
 
 	// remove the currently selected car
 	this.removeSelected = function() {
-		if (this.selected === null) {
+		if ($scope.selected === null) {
 			alert("Error: Cannot update selected car. No car is currently selected in the grid. ");
 			return;
 		}
 	
-		this.remove(this.selected);
-		this.selected = null;
+		gridCtrl.remove($scope.selected);
+		$scope.selected = null;
 	};	
 
 	// update the currently selected car	
 	this.updateSelected = function(car) {
-		if (this.selected === null) {
+		if ($scope.selected === null) {
 			alert("Error: Cannot update selected car. No car is currently selected in the grid. ");
 			return;
 		}
 
-		this.removeSelected();
-		this.cars.push(car);
-		this.selected = null;
+		gridCtrl.removeSelected();
+		$scope.cars.push(car);
+		$scope.selected = null;
 	};		       
 
 };

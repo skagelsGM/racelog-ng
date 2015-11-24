@@ -2,22 +2,23 @@
 
   <table id="raceCarGridTable">      
     <tr>
-      <th ng-repeat="heading in rcgridCtrl.headings">{{ heading }}</th>
+      <th ng-repeat="heading in headings">&nbsp;{{ heading }}&nbsp;</th>
     </tr>
-    <tr ng-repeat="car in rcgridCtrl.cars |orderBy: 'number'" ng-click="rcgridCtrl.select(car)">
-      <td>{{car.number}}</td>
-      <td>{{car.driver}}</td>
+    <tr ng-repeat="car in cars |orderBy: 'number'" ng-click="rcgridCtrl.select(car)">
+      <td>{{ $index + 1 }}</td>
+      <td>{{ car.number }}</td>
+      <td>{{ car.driver }}</td>
       <td>
-        <div ng-hide="rcgridCtrl.carImgSrc(car.make) != undefined">{{car.make}}</div>
-        <img ng-hide="rcgridCtrl.carImgSrc(car.make) === undefined" ng-src="{{rcgridCtrl.carImgSrc(car.make)}}" />
+        <div ng-hide="rcgridCtrl.carImgSrc(car.make) != undefined">{{ car.make }}</div>
+        <img ng-hide="rcgridCtrl.carImgSrc(car.make) === undefined" ng-src="{{ rcgridCtrl.carImgSrc(car.make) }}" />
       </td>
-      <td>{{car.raceteam}}</td>
+      <td>{{ car.raceteam }}</td>
       <td>
-        <div ng-hide="rcgridCtrl.carImgSrc(car.sponsor) != undefined">{{car.sponsor}}</div>
-        <img class="rcSponsorImg" ng-hide="rcgridCtrl.carImgSrc(car.sponsor) === undefined" ng-src="{{rcgridCtrl.carImgSrc(car.sponsor)}}"
+        <div ng-hide="rcgridCtrl.carImgSrc(car.sponsor) != undefined">{{ car.sponsor }}</div>
+        <img class="rcSponsorImg" ng-hide="rcgridCtrl.carImgSrc(car.sponsor) === undefined" ng-src="{{ rcgridCtrl.carImgSrc(car.sponsor) }}"
              width="50" />
       </td>
-      <td>{{car.status}}</td>
+      <td>{{ car.status }}</td>
       <td><div ng-hide="car.number === 'Loading...'">
         <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#raceCarModal"       >Edit</button>
         <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#raceCarRemoveModal" >Remove</button>
