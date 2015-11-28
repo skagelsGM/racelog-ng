@@ -20,6 +20,10 @@ h1, p {
   margin-left:     20px;
 }
 
+.raceCarGrid table {
+  align:          center;
+}
+
 .raceCarGrid td, th { 
   padding:        7px;
   border:         #4e95f4 1px solid;
