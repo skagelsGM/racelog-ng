@@ -1,0 +1,13 @@
+{
+  "author": "Scott Kagels",
+  "name": "racecarlog",
+  "version": "0.0.1",
+  "description": "persistent race car log",
+  "main": "racecarlog",
+  "dependencies": {
+    "jsonfile": "^2.2.3"
+  },
+  "engines": {
+    "node": "*"
+  }
+}

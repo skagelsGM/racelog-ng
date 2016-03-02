@@ -1,0 +1,349 @@
+{
+  "logName": "Max's Nascar Race Team: Race Cars",
+  "cars": [
+    {
+      "driver": "Austin Dillon",
+      "number": "3",
+      "raceteam": "Richard Childress Racing",
+      "make": "Chevrolet",
+      "sponsor": "Advocare",
+      "status": "Active"
+    },
+    {
+      "driver": "Kevin Harvick",
+      "number": "4",
+      "raceteam": "Steward-Haas Racing",
+      "make": "Chevrolet",
+      "sponsor": "Jimmy John's",
+      "status": "Active"
+    },
+    {
+      "driver": "Kasey Kahne",
+      "number": "5",
+      "raceteam": "Hendrick Motorsports",
+      "make": "Chevrolet",
+      "sponsor": "Great Clips",
+      "status": "Active"
+    },
+    {
+      "driver": "Kasey Kahne",
+      "number": "5",
+      "raceteam": "Hendrick Motorsports",
+      "make": "Chevrolet",
+      "sponsor": "Quaker State",
+      "status": "Active"
+    },
+    {
+      "driver": "Kasey Kahne",
+      "number": "5",
+      "raceteam": "Hendrick Motorsports",
+      "make": "Chevrolet",
+      "sponsor": "Pepsi Max",
+      "status": "Active"
+    },
+    {
+      "driver": "Jeff Gordon",
+      "number": "24",
+      "raceteam": "Hendrick Motorsports",
+      "make": "Chevrolet",
+      "sponsor": "Du Pont",
+      "status": "Active"
+    },
+    {
+      "driver": "Jimmy Johnson",
+      "number": "48",
+      "raceteam": "Hendrick Motorsports",
+      "make": "Chevrolet",
+      "sponsor": "Lowe's",
+      "status": "Active"
+    },
+    {
+      "driver": "Brian Scott",
+      "number": "33",
+      "raceteam": "Joe Falk",
+      "make": "Chevrolet",
+      "sponsor": "Rheem",
+      "status": "Active"
+    },
+    {
+      "driver": "Ricky Stenhouse Jr.",
+      "number": "17",
+      "raceteam": "Roush Fenway Racing",
+      "make": "Ford",
+      "sponsor": "Best Buy",
+      "status": "Active"
+    },
+    {
+      "driver": "Austin Dillon",
+      "number": "3",
+      "raceteam": "Richard Childress Racing",
+      "make": "Chevrolet",
+      "sponsor": "Cheerios",
+      "status": "Active"
+    },
+    {
+      "driver": "Joey Logano",
+      "number": "22",
+      "raceteam": "Team Penske",
+      "make": "Ford",
+      "sponsor": "Hertz",
+      "status": "Active"
+    },
+    {
+      "driver": "Joey Logano",
+      "number": "22",
+      "raceteam": "Team Penske",
+      "make": "Ford",
+      "sponsor": "Pennzoil",
+      "status": "Active"
+    },
+    {
+      "driver": "Aric Almirola",
+      "number": "43",
+      "raceteam": "Richard Petty Motorsports",
+      "make": "Ford",
+      "sponsor": "Smithfield",
+      "status": "Active"
+    },
+    {
+      "driver": "Kurt Busch",
+      "number": "41",
+      "raceteam": "Steward-Haas Racing",
+      "make": "Chevrolet",
+      "sponsor": "Haas",
+      "status": "Active"
+    },
+    {
+      "driver": "Kyle Busch",
+      "number": "18",
+      "raceteam": "Joe Gibbs Racing",
+      "make": "Toyota",
+      "sponsor": "M&Ms",
+      "status": "Active"
+    },
+    {
+      "driver": "Matt Kenseth",
+      "number": "20",
+      "raceteam": "Joe Gibbs Racing",
+      "make": "Toyota",
+      "sponsor": "The Home Depot",
+      "status": "Active"
+    },
+    {
+      "driver": "Tony Stewart",
+      "number": "14",
+      "raceteam": "Steward-Haas Racing",
+      "make": "Chevrolet",
+      "sponsor": "Mobil",
+      "status": "Active"
+    },
+    {
+      "driver": "Trevor Bayne",
+      "number": "21",
+      "raceteam": "Roush Fenway Racing",
+      "make": "Ford",
+      "sponsor": "Motorcraft",
+      "status": "Active"
+    },
+    {
+      "driver": "Brian Vickers",
+      "number": "55",
+      "raceteam": "Michael Waltrip Racing",
+      "make": "Toyota",
+      "sponsor": "Aaron's",
+      "status": "Active"
+    },
+    {
+      "driver": "Danica Patrick",
+      "number": "10",
+      "raceteam": "Steward-Haas Racing",
+      "make": "Chevrolet",
+      "sponsor": "GoDaddy",
+      "status": "Active"
+    },
+    {
+      "driver": "Dale Earnhardt Jr.",
+      "number": "88",
+      "raceteam": "Hendrick Motorsports",
+      "make": "Chevrolet",
+      "sponsor": "Diet Mountain Dew",
+      "status": "Active"
+    },
+    {
+      "driver": "Dale Earnhardt Jr.",
+      "number": "88",
+      "raceteam": "Hendrick Motorsports",
+      "make": "Chevrolet",
+      "sponsor": "The National Guard",
+      "status": "Active"
+    },
+    {
+      "driver": "Denny Hamlin",
+      "number": "11",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "FedEx Express",
+      "status": "Active"
+    },
+    {
+      "driver": "Casey Mears",
+      "number": "13",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "Geico",
+      "status": "Active"
+    },
+    {
+      "driver": "Casey Mears",
+      "number": "13",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "Geico",
+      "status": "Active"
+    },
+    {
+      "driver": "Greg Biffle",
+      "number": "16",
+      "raceteam": "Steward-Haas Racing",
+      "make": "Ford",
+      "sponsor": "Ortho Bug B Gon",
+      "status": "Active"
+    },
+    {
+      "driver": "Ty Dillon",
+      "number": "33",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "Wesco",
+      "status": "Active"
+    },
+    {
+      "driver": "David Ragan",
+      "number": "34",
+      "raceteam": "",
+      "make": "Ford",
+      "sponsor": "KFC",
+      "status": "Active"
+    },
+    {
+      "driver": "AJ Allmendinger",
+      "number": "47",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "Bush's Beans",
+      "status": "Active"
+    },
+    {
+      "driver": "Martin Truex Jr.",
+      "number": "56",
+      "raceteam": "",
+      "make": "Toyota",
+      "sponsor": "Napa Auto Parts",
+      "status": "Active"
+    },
+    {
+      "driver": "Brad Keselowski",
+      "number": "2",
+      "raceteam": "Team Penske",
+      "make": "Ford",
+      "sponsor": "Miller Lite",
+      "status": "Active"
+    },
+    {
+      "driver": "Chase Elliot",
+      "number": "9",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "Napa Auto Parts",
+      "status": "Active"
+    },
+    {
+      "driver": "Brian Scott",
+      "number": "2",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "rain-x",
+      "status": "Active"
+    },
+    {
+      "driver": "Regan Smith",
+      "number": "7",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "Breyer's",
+      "status": "Active"
+    },
+    {
+      "driver": "Clint Bowyer",
+      "number": "15",
+      "raceteam": "",
+      "make": "Toyota",
+      "sponsor": "Peak",
+      "status": "Active"
+    },
+    {
+      "driver": "Greg Biffle",
+      "number": "16",
+      "raceteam": "",
+      "make": "Ford",
+      "sponsor": "3M",
+      "status": "Active"
+    },
+    {
+      "driver": "Ryan Blaney",
+      "number": "16",
+      "raceteam": "",
+      "make": "Ford",
+      "sponsor": "Lilly",
+      "status": "Active"
+    },
+    {
+      "driver": "Marcos Ambrose",
+      "number": "9",
+      "raceteam": "",
+      "make": "Ford",
+      "sponsor": "DeWalt",
+      "status": "Active"
+    },
+    {
+      "driver": "Ryan Reed",
+      "number": "22",
+      "raceteam": "",
+      "make": "Ford",
+      "sponsor": "Discount Tire",
+      "status": "Active"
+    },
+    {
+      "driver": "Jeff Burton",
+      "number": "31",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "Airgas",
+      "status": "Active"
+    },
+    {
+      "driver": "Kyle Larson",
+      "number": "42",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "Target",
+      "status": "Active"
+    },
+    {
+      "driver": "Chase Elliot",
+      "number": "9",
+      "raceteam": "",
+      "make": "Chevrolet",
+      "sponsor": "Napa Auto Parts",
+      "status": "Active"
+    },
+    {
+      "driver": "Jamie McMurray",
+      "number": "1",
+      "raceteam": "Chip Ganassi Racing",
+      "make": "Chevrolet",
+      "sponsor": "McDonald's",
+      "status": "Active"
+    }
+  ]
+}

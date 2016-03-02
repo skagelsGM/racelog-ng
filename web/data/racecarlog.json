@@ -202,6 +202,14 @@
       "status":   "Active"
     },
     {
+      "driver":   "Casey Mears",
+      "number":   "13",
+      "raceteam": "",
+      "make":     "Chevrolet",
+      "sponsor":  "Geico",
+      "status":   "Active"
+    },
+    {
       "driver":   "Greg Biffle",
       "number":   "16",
       "raceteam": "Steward-Haas Racing",
@@ -247,6 +255,86 @@
       "raceteam": "Team Penske",
       "make":     "Ford",
       "sponsor":  "Miller Lite",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Chase Elliot",
+      "number":   "9",
+      "raceteam": "",
+      "make":     "Chevrolet",
+      "sponsor":  "Napa Auto Parts",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Brian Scott",
+      "number":   "2",
+      "raceteam": "",
+      "make":     "Chevrolet",
+      "sponsor":  "rain-x",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Regan Smith",
+      "number":   "7",
+      "raceteam": "",
+      "make":     "Chevrolet",
+      "sponsor":  "Breyer's",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Clint Bowyer",
+      "number":   "15",
+      "raceteam": "",
+      "make":     "Toyota",
+      "sponsor":  "Peak",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Greg Biffle",
+      "number":   "16",
+      "raceteam": "",
+      "make":     "Ford",
+      "sponsor":  "3M",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Ryan Blaney",
+      "number":   "16",
+      "raceteam": "",
+      "make":     "Ford",
+      "sponsor":  "Lilly",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Marcos Ambrose",
+      "number":   "9",
+      "raceteam": "",
+      "make":     "Ford",
+      "sponsor":  "DeWalt",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Ryan Reed",
+      "number":   "22",
+      "raceteam": "",
+      "make":     "Ford",
+      "sponsor":  "Discount Tire",
+      "status":   "Active"
+    },  
+    {
+      "driver":   "Jeff Burton",
+      "number":   "31",
+      "raceteam": "",
+      "make":     "Chevrolet",
+      "sponsor":  "Airgas",
+      "status":   "Active"
+    },
+    {
+      "driver":   "Kyle Larson",
+      "number":   "42",
+      "raceteam": "",
+      "make":     "Chevrolet",
+      "sponsor":  "Target",
       "status":   "Active"
     },
     {

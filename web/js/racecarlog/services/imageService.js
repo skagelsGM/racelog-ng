@@ -25,7 +25,10 @@ var ImageService = function($http) {
 		  "Smithfield": 		"http://feedstuffs.com/cdfm/Feeess50/author/303/22659466_BG1.jpg",
 		  "Haas": 				"https://upload.wikimedia.org/wikipedia/en/b/b5/Haas_Automation,_Inc._Logo.jpg",
 		  "Great Clips": 		"http://i117.photobucket.com/albums/o54/north-florida/Review/Great20Clips_logowithtag_black.jpg",
-		  "Aarons": 			""
+		  "Aarons": 			"",
+		  "Miller Lite":        "http://northwoodsleague.com/kalamazoo-growlers/wp-content/uploads/sites/13/2014/05/miller_lite_logo1.jpg",
+		  "Geico": 				"http://www.findthatlogo.com/wp-content/uploads/2011/09/geico-logo.jpg",
+		  "FedEx Express":  	"http://www.pasadenashipping.com/Flash/FedEx_express.jpg"
 		};
 
 		var service = this;

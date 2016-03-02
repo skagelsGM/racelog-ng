@@ -38,14 +38,31 @@ var RaceCarGridController = function($scope, $rootScope, carModel, imageService)
 
 	$rootScope.updateSelected = function(car) {
 		gridCtrl.updateSelected(car);
+		// update persistent store, too
+		carModel.save(gridCtrl.log).then(
+			function(result) {
+				console.log('[rootScope.updateSelected] response from save request: %s', result.data.status);
+			}
+		);
 	};
 
 	$rootScope.removeSelected = function() {
-		gridCtrl.removeSelected();
+		gridCtrl._removeSelected();
+		carModel.save(gridCtrl.log).then(
+			function(result) {
+				console.log('[rootScope.removeSelected] response from save request: %s', result.data.status);
+			}
+		);
 	};
 
 	$rootScope.add = function(car) {
 		$scope.cars.push(car);
+		// update persistent store, too
+		carModel.save(gridCtrl.log).then(
+			function(result) {
+				console.log('[rootScope.add] response from save request: %s', result.data.status);
+			}
+		);
 	}
     
     //
@@ -53,14 +70,19 @@ var RaceCarGridController = function($scope, $rootScope, carModel, imageService)
 	//
 
 	// load car log from model
-	carModel.all().then(
-		function(result) {				
-			// setTimeout( 
-			// function(result, $scope, gridCtrl) {			
-				console.log('loading race car log model...');					
-				gridCtrl.load(result.data);
-			// }
-			// , 2000, result, $scope, gridCtrl);
+	carModel.all().then( 
+		function successCallback(result) {				
+			console.log('[raceCarGridController.init] loading race car log model...');					
+			gridCtrl.load(result.data);
+		},
+
+		function errorCallback(result) {
+			console.err('[raceCarGridController.init] unable to load race car log from service... service not available at this time...');
+			carModel.allFromCache().then(
+				function(result) {				
+					console.log('[raceCarGridController.init] loading race car log model from local cache...');					
+					gridCtrl.load(result.data);
+				});
 		}
 	);
 
@@ -90,10 +112,15 @@ var RaceCarGridController = function($scope, $rootScope, carModel, imageService)
 		}
 	};	
 
-	// remove the currently selected car
+	// public interface to remove the currently selected car
 	this.removeSelected = function() {
+		$rootScope.removeSelected();
+	};
+
+	// private method to remove the currently selected car
+	this._removeSelected = function() {
 		if ($scope.selected === null) {
-			alert("Error: Cannot update selected car. No car is currently selected in the grid. ");
+			console.log("[raceCarGridController._removeSelected] Error: Cannot remove selected car. No car is currently selected in the grid. ");
 			return;
 		}
 	
@@ -104,13 +131,13 @@ var RaceCarGridController = function($scope, $rootScope, carModel, imageService)
 	// update the currently selected car	
 	this.updateSelected = function(car) {
 		if ($scope.selected === null) {
-			alert("Error: Cannot update selected car. No car is currently selected in the grid. ");
+			console.log("[raceCarGridController.updateSelected] Error: Cannot update selected car. No car is currently selected in the grid. ");
 			return;
 		}
 
-		gridCtrl.removeSelected();
+		gridCtrl._removeSelected();
 		$scope.cars.push(car);
-		$scope.selected = null;
+		$scope.selected = null;		
 	};		       
 
 };
