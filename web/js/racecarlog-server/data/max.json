@@ -344,6 +344,22 @@
       "make": "Chevrolet",
       "sponsor": "McDonald's",
       "status": "Active"
+    },
+    {
+      "driver": "Elliot Sadler",
+      "number": "11",
+      "raceteam": "Joe Gibbs Racing",
+      "make": "Toyota",
+      "sponsor": "1 Main Financial",
+      "status": "Active"
+    },
+    {
+      "driver": "Carl Edwards",
+      "number": "19",
+      "raceteam": "Joe Gibbs Racing",
+      "make": "Toyota",
+      "sponsor": "Comcast",
+      "status": "Active"
     }
   ]
 }
